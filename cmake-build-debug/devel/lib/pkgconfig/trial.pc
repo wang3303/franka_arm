@@ -1,0 +1,8 @@
+prefix=/home/michael/ws_moveit/src/trial/cmake-build-debug/devel
+
+Name: trial
+Description: Description of trial
+Version: 0.0.0
+Cflags: -I/home/michael/ws_moveit/src/trial/first/include -I/home/michael/ws_moveit/src/trial/pickplace/include -I/usr/include/eigen3
+Libs: -L/home/michael/ws_moveit/src/trial/cmake-build-debug/devel/lib -linteractivity_utils
+Requires: moveit_core moveit_visual_tools moveit_ros_planning_interface interactive_markers
