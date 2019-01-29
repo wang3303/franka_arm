@@ -53,23 +53,40 @@ void testExecuteTraj(moveit::planning_interface::MoveGroupInterface &move_group,
 
     std::vector<geometry_msgs::Pose> waypoints;
     waypoints.push_back(targetPose3);
-    targetPose3.position.z -= 0.1;
+/*    targetPose3.position.z -= 0.1;
     waypoints.push_back(targetPose3);
-//    targetPose3.position.y -= 0.2;
-//    waypoints.push_back(targetPose3);
-//    targetPose3.position.z += 0.2;
-//    targetPose3.position.y += 0.2;
-//    targetPose3.position.x -= 0.2;
-//    waypoints.push_back(targetPose3);  // up and left
-
+    targetPose3.position.y -= 0.2;
+    waypoints.push_back(targetPose3);
+    targetPose3.position.z += 0.2;
+    targetPose3.position.y += 0.2;
+    targetPose3.position.x -= 0.2;
+    waypoints.push_back(targetPose3);  // up and left
+*/
     move_group.setMaxVelocityScalingFactor(0.1);
     moveit_msgs::RobotTrajectory trajectory;
+    trajectory = moveit_msgs::RobotTrajectory();
     pub.publish(trajectory);
     const double jump_threshold = 0.0;
     const double eef_step = 0.01;
     double fraction = move_group.computeCartesianPath(waypoints, eef_step, jump_threshold, trajectory);
+
+    std::vector<double> init_joint = move_group.getCurrentJointValues();
+    for (int i = 0; i < 10; i++) {
+        trajectory_msgs::JointTrajectoryPoint temp_point;
+        temp_point.positions = init_joint;
+        temp_point.velocities = std::vector<double>(7, 0);
+        temp_point.accelerations = std::vector<double>(7, 0);
+        init_joint[1] += 0.01;
+        trajectory.joint_trajectory.points.push_back(temp_point);
+
+    }
     pub.publish(trajectory);
-//    executeTrajectory(move_group, visualTools, joint_model_group, trajectory, pub);
+    executeTrajectory(move_group, visualTools, joint_model_group, trajectory, pub);
+}
+
+void trajCallback(const moveit_msgs::RobotTrajectory& msg)
+{
+    ROS_INFO("I heard: []");
 }
 
 int main(int argc, char** argv) {
@@ -111,7 +128,9 @@ int main(int argc, char** argv) {
     visualTools.prompt("Ready to start");
 
     ros::Publisher pub = node_handle.advertise<moveit_msgs::RobotTrajectory>("traj", 1);
+    //ros::Subscriber sub = node_handle.subscribe("traj_listener", 1000, trajCallback);
 
+    //ros::spin();
     testExecuteTraj(move_group, visualTools, joint_model_group, pub);
     ros::shutdown();
 

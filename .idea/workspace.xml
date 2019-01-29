@@ -138,8 +138,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc2e3ead-e5bc-4bf1-9230-be51278c3c9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first/include/first.h" beforeDir="false" afterPath="$PROJECT_DIR$/first/include/first.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first/src/first.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/first/src/first.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -203,8 +201,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/first/src/first.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="71" column="20" selection-start-line="71" selection-end-line="72" />
+            <state relative-caret-position="378">
+              <caret line="72" column="69" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -260,8 +258,8 @@
       <find>RobotState</find>
       <find>trajectory</find>
       <find>textpose</find>
-      <find>compute</find>
       <find>robottrajec</find>
+      <find>compute</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1351,24 +1349,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///opt/ros/kinetic/include/moveit_msgs/RobotTrajectory.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///opt/ros/kinetic/include/moveit/move_group_interface/move_group_interface.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="702" column="2" selection-start-line="702" selection-start-column="2" selection-end-line="710" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///opt/ros/kinetic/include/moveit/planning_scene_interface/planning_scene_interface.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1379,6 +1363,20 @@
           <folding>
             <element signature="e#1947#1987#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/moveit_msgs/RobotTrajectory.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/moveit/planning_scene_interface/planning_scene_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1394,8 +1392,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/first/src/first.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="71" column="20" selection-start-line="71" selection-end-line="72" />
+        <state relative-caret-position="378">
+          <caret line="72" column="69" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="69" />
         </state>
       </provider>
     </entry>
